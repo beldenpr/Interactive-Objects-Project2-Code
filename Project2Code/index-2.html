@@ -1,0 +1,60 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Webcam Image Classification using MobileNet and p5.js</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/addons/p5.dom.min.js"></script>
+    <script src="libraries/p5.serialserver.js"></script>
+    <script src="libraries/p5.serialport.js"></script>
+
+    <script src="https://unpkg.com/ml5@0.3.1/dist/ml5.min.js" type="text/javascript"></script>
+    <style>
+        #title {
+            width: 500px;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        #guess {
+            width: 500px;
+            height: 50px;
+            position: absolute;
+            margin-top: 460px;
+        }
+
+        #confidence {
+            width: 500px;
+            height: 50px;
+            position: absolute;
+            margin-top: 570px;
+        }
+
+        #button {
+            font-size: 20px;
+            width: 100px;
+            border-radius: 20px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <h1 id="title">Byte Food Scanner</h3>
+
+        <script src="sketch.js"></script>
+
+        <div id="guess">
+            <h3>I think thats a:</h3>
+        </div>
+        <div id="confidence">
+
+            <button id="button" onclick="scan()">Scan</button>
+
+        </div>
+</body>
+
+</html>
